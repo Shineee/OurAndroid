@@ -1,2 +1,2 @@
 # OurAndroid
-The OurAndroid is a quick Android framework，
+The OurAndroid is a quick Android framework.
