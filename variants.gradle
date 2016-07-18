@@ -1,0 +1,15 @@
+ext {
+    NORMAL_SERVER = 'NORMAL_SERVER'
+    UPLOAD_AVATAR_SERVER = 'UPLOAD_AVATAR_SERVER'
+    UPLOAD_FILE_SERVER = 'UPLOAD_FILE_SERVER'
+    baseVersionName = '1.0'
+
+    official_online = [
+            normal_server: "\"http://a.xxx.com/Api\"",
+            upload_server: "\"http://b.xxx.com\""
+    ]
+    official_offline = [
+            normal_server: "\"http://c.xxx.com/Api\"",
+            upload_server: "\"http://d.xxx.com\""
+    ]
+}
