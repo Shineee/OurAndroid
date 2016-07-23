@@ -7,4 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="RaiseButton" parent="Theme.AppCompat.Light">
+        <!-- 点击高亮时背景颜色 -->
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <!-- 按钮正常背景颜色 -->
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
 </resources>
