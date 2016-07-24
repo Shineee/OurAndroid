@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
-            toolbar:navigationIcon="@mipmap/icon"
             toolbar:title="@string/loginPageText"
-            toolbar:titleTextColor="@color/colorWhite">
+            toolbar:navigationIcon="@mipmap/"
+            toolbar:titleTextColor="@color/colorWhite" toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         </android.support.v7.widget.Toolbar>
     </LinearLayout>
@@ -57,7 +57,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dip"
         android:elevation="10dp"
-        android:text="登录"
+        android:text="@string/loginPageText"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:theme="@style/RaiseButton" />

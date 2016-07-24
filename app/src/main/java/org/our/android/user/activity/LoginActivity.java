@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import org.our.android.R;
 
@@ -12,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
+ * 登录界面
  * Created by wangyang on 2016/6/21.
  */
 public class LoginActivity extends AppCompatActivity {
@@ -32,5 +34,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private void initView() {
         setSupportActionBar(tbTitleMenu);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        tbTitleMenu.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 }
