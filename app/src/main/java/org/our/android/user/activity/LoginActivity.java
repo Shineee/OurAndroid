@@ -1,7 +1,6 @@
 package org.our.android.user.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -34,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void initView() {
         setSupportActionBar(tbTitleMenu);
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         tbTitleMenu.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
