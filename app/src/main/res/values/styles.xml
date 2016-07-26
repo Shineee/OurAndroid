@@ -10,7 +10,7 @@
         <item name="colorControlNormal">@android:color/white</item>
     </style>
 
-    <style name="RaiseButton" parent="Theme.AppCompat.Light">
+    <style name="RaiseButton" parent="Base.Widget.AppCompat.Button.Borderless">
         <!-- 点击高亮时背景颜色 -->
         <item name="colorControlHighlight">@color/colorAccent</item>
         <!-- 按钮正常背景颜色 -->

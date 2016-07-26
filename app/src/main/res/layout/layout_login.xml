@@ -51,9 +51,11 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:layout_width="200dip"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
         android:layout_marginTop="10dip"
         android:elevation="10dp"
         android:text="@string/loginPageText"
