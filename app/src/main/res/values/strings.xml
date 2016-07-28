@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">OurAndroid</string>
-    <string name="version">0.0.13.20160727_base</string>
+    <string name="version">0.0.14.20160728_base</string>
     <string name="loginPageText">登录</string>
     <string name="loginUserNameText">用户名</string>
     <string name="loginPasswordText">密码</string>
     <string name="registerPageText">注册</string>
+    <string name="registerUserNameText">用户名</string>
+    <string name="registerPasswordText">密码</string>
+    <string name="registerRePasswordText">重复密码</string>
 </resources>
