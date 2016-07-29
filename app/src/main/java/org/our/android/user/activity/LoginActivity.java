@@ -3,11 +3,11 @@ package org.our.android.user.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import org.our.android.R;
+import org.our.android.main.base.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,7 +17,7 @@ import butterknife.OnClick;
  * 登录界面
  * Created by wangyang on 2016/6/21.
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
     @BindView(R.id.tbTopMenu)
     Toolbar tbTopMenu;
     @BindView(R.id.tilUserName)

@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import org.our.android.R;
+import org.our.android.main.base.BaseActivity;
 import org.our.android.user.activity.LoginActivity;
 
 import butterknife.BindView;
@@ -22,7 +22,7 @@ import butterknife.OnClick;
  * 主界面
  * Created by Administrator on 2016/7/24.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     @BindView(R.id.tbTopMenu)
     Toolbar tbTopMenu;
     @BindView(R.id.dlLeftMenu)
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.layout_main);
         ButterKnife.bind(this);
         initView();
+        showLoadingDialog();
     }
 
     private void initView() {

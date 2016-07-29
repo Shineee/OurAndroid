@@ -20,4 +20,16 @@
         <!-- 按钮正常背景颜色 -->
         <item name="colorButtonNormal">@color/colorPrimary</item>
     </style>
+
+    <style name="Progress.Dialog" parent="@android:style/Widget.Material.Light.ProgressBar.Large">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:minWidth">50dip</item>
+        <item name="android:maxWidth">50dip</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:maxHeight">50dip</item>
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--<item name="android:backgroundDimEnabled">true</item>-->
+    </style>
 </resources>
