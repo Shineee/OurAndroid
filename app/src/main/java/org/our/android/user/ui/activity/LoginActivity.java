@@ -1,6 +1,8 @@
-package org.our.android.user.activity;
+package org.our.android.user.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
@@ -9,19 +11,24 @@ import org.our.android.main.base.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
- * 注册界面
+ * 登录界面
  * Created by wangyang on 2016/6/21.
  */
-public class RegisterActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity {
     @BindView(R.id.tbTopMenu)
     Toolbar tbTopMenu;
+    @BindView(R.id.tilUserName)
+    TextInputLayout tilUserName;
+    @BindView(R.id.tilPassword)
+    TextInputLayout tilPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_register);
+        setContentView(R.layout.layout_login);
         ButterKnife.bind(this);
         initView();
     }
@@ -37,5 +44,11 @@ public class RegisterActivity extends BaseActivity {
             }
         });
 
+    }
+
+    @OnClick(R.id.btnRegister)
+    public void btnRegister() {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

@@ -12,7 +12,7 @@ import android.widget.ListView;
 
 import org.our.android.R;
 import org.our.android.main.base.BaseActivity;
-import org.our.android.user.activity.LoginActivity;
+import org.our.android.user.ui.activity.LoginActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

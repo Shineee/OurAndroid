@@ -5,11 +5,11 @@ ext {
     baseVersionName = '1.0'
 
     official_online = [
-            normal_server: "\"http://a.xxx.com/Api\"",
+            normal_server: "\"https://api.bmob.cn\"",
             upload_server: "\"http://b.xxx.com\""
     ]
     official_offline = [
-            normal_server: "\"http://c.xxx.com/Api\"",
+            normal_server: "\"https://api.bmob.cn\"",
             upload_server: "\"http://d.xxx.com\""
     ]
 }

@@ -1,4 +1,4 @@
-package org.our.android.user.activity;
+package org.our.android.user.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * 登录界面
+ * 个人信息界面
  * Created by wangyang on 2016/6/21.
  */
-public class LoginActivity extends BaseActivity {
+public class ProfileActivity extends BaseActivity {
     @BindView(R.id.tbTopMenu)
     Toolbar tbTopMenu;
     @BindView(R.id.tilUserName)
@@ -28,7 +28,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_login);
+        setContentView(R.layout.layout_profile);
         ButterKnife.bind(this);
         initView();
     }
