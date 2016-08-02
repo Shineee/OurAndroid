@@ -1,13 +1,16 @@
 package org.our.android.user.ui.activity;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import org.our.android.R;
+import org.our.android.databinding.LayoutLoginBinding;
 import org.our.android.main.base.BaseActivity;
+import org.our.android.user.model.User;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +31,10 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_login);
+        LayoutLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.layout_login);
+        User user = new User();
+        user.setUserName("wyhdgx");
+        binding.setUser(user);
         ButterKnife.bind(this);
         initView();
     }
