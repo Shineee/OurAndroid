@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.our.android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".main.MainApplication"
         android:allowBackup="true"
@@ -18,11 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".user.ui.activity.LoginActivity"
+            android:name=".user.activity.LoginActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".user.ui.activity.RegisterActivity"
+            android:name=".user.activity.RegisterActivity"
             android:screenOrientation="portrait">
         </activity>
     </application>
