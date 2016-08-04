@@ -57,4 +57,5 @@ dependencies {
     compile 'com.android.support:design:24.1.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.orhanobut:logger:1.15'
 }

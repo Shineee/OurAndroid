@@ -5,27 +5,15 @@ package org.our.android.user.model;
  * Created by wangyang on 2016/8/1.
  */
 public class User {
-    public String mId;
-    public String mUserName;
-    public String mPassword;
-    public boolean mIsMobilePhoneNumberVerified;
-    public String mMobilePhoneNumber;
-    public boolean mIsEmailVerified;
-    public String mEmail;
-    public String mCreateTime;
-    public String mUpdateTime;
-
-//    public User(String id, String userName, String password, boolean isMobilePhoneNumberVerified, String mobilePhoneNumber, boolean isEmailVerified, String email, String createTime, String updateTime) {
-//        mId = id;
-//        mUserName = userName;
-//        mPassword = password;
-//        mIsMobilePhoneNumberVerified = isMobilePhoneNumberVerified;
-//        mMobilePhoneNumber = mobilePhoneNumber;
-//        mIsEmailVerified = isEmailVerified;
-//        mEmail = email;
-//        mCreateTime = createTime;
-//        mUpdateTime = updateTime;
-//    }
+    private String mId;
+    private String mUserName;
+    private String mPassword;
+    private boolean mIsMobilePhoneNumberVerified;
+    private String mMobilePhoneNumber;
+    private boolean mIsEmailVerified;
+    private String mEmail;
+    private String mCreateTime;
+    private String mUpdateTime;
 
     public String getId() {
         return mId;
