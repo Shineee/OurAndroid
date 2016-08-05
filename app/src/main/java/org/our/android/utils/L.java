@@ -22,10 +22,14 @@ public class L {
     }
 
     public static void v(String msg, Object... args) {
-        Logger.t(TAG).v(msg, args);
+        Logger.v(msg, args);
     }
 
     public static void v(String tag, String msg, Object... args) {
         Logger.t(tag).v(msg, args);
+    }
+
+    public static void e(String tag, Throwable throwable, String msg, Object... args) {
+        Logger.t(tag).e(throwable, msg, args);
     }
 }

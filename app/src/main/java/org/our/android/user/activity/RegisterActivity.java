@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 
 import org.our.android.R;
@@ -60,6 +61,29 @@ public class RegisterActivity extends BaseActivity {
 
     @OnClick(R.id.btnRegister)
     public void btnRegister() {
-        L.v(TAG, "btnRegister userName=%s", tilUserName.getEditText().getText());
+        String userName = tilUserName.getEditText().getText().toString();
+        String password = tilPassword.getEditText().getText().toString();
+        String rePassword = tilRePassword.getEditText().getText().toString();
+
+        if (TextUtils.isEmpty(userName)) {
+            tilUserName.setError(getString(R.string.registerUserNameEmptyErrorText));
+            tilPassword.setErrorEnabled(false);
+        } else if (TextUtils.isEmpty(password)) {
+            tilUserName.setErrorEnabled(false);
+            tilPassword.setError(getString(R.string.registerPasswordEmptyErrorText));
+        } else if (password.length() < 6) {
+            tilUserName.setErrorEnabled(false);
+            tilPassword.setError(getString(R.string.registerPasswordLengthErrorText));
+        } else if (!password.equals(rePassword)) {
+            tilUserName.setErrorEnabled(false);
+            tilPassword.setErrorEnabled(false);
+            tilRePassword.setError(getString(R.string.registerPasswordConformErrorText));
+            L.v(TAG, "btnRegister password=%s rePassword=%s", password, rePassword);
+        } else {
+            tilRePassword.setErrorEnabled(false);
+            mUser.setUserName(userName);
+            mUser.setPassword(password);
+            mPresenterRegister.register(mUser);
+        }
     }
 }
