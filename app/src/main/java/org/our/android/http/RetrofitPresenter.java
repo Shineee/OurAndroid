@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by wangyang on 2016/7/30.
  */
 public class RetrofitPresenter {
-    private static final String END_POINT = "https://api.bmob.cn";
+    private static final String END_POINT = "https://api.bmob.cn/";
     private static final String APP_ID = "60485096e0a82579c8379fd743e27547";
     private static final String API_KEY = "a65b41ab52705d5ca92d7fdab7343505";
 

@@ -29,6 +29,10 @@ public class L {
         Logger.t(tag).v(msg, args);
     }
 
+    public static void e(String tag, String msg, Object... args) {
+        Logger.t(tag).e(msg, args);
+    }
+
     public static void e(String tag, Throwable throwable, String msg, Object... args) {
         Logger.t(tag).e(throwable, msg, args);
     }

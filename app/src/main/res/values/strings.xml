@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OurAndroid</string>
-    <string name="version">0.0.21.20160805_base</string>
+    <string name="version">0.0.22.20160806_base</string>
     <string name="loginPageText">登录</string>
     <string name="loginUserNameText">用户名</string>
     <string name="loginPasswordText">密码</string>
@@ -12,4 +12,5 @@
     <string name="registerPasswordEmptyErrorText">密码不能为空</string>
     <string name="registerPasswordLengthErrorText">密码长度不能小于6位</string>
     <string name="registerPasswordConformErrorText">两次输入密码不一致</string>
+    <string name="registerSuccessText">注册成功</string>
 </resources>

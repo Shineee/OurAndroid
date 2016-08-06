@@ -13,6 +13,6 @@ public interface IApiServiceRegister {
     /**
      * 注册
      */
-    @POST("/1/users")
+    @POST("1/users")
     Call<User> register(@Body User user);
 }
