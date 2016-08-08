@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 
 import org.our.android.R;
@@ -12,6 +13,8 @@ import org.our.android.databinding.LayoutLoginBinding;
 import org.our.android.main.base.BaseActivity;
 import org.our.android.user.model.User;
 import org.our.android.user.presenter.PresenterLogin;
+
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,17 +32,17 @@ public class LoginActivity extends BaseActivity {
     @BindView(R.id.tilPassword)
     TextInputLayout tilPassword;
     private PresenterLogin mPresenterLogin;
+    private User mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LayoutLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.layout_login);
-        mPresenterLogin = new PresenterLogin(binding);
-        User user = new User();
-        user.setUserName("wyhdgx");
-        binding.setUser(user);
         ButterKnife.bind(this);
         initView();
+        mPresenterLogin = new PresenterLogin(binding);
+        mUser = new User();
+        binding.setUser(mUser);
     }
 
     private void initView() {
@@ -63,6 +66,20 @@ public class LoginActivity extends BaseActivity {
 
     @OnClick(R.id.btnLogin)
     public void btnLogin() {
-        mPresenterLogin.login("aaaa","bbbb");
+        String userName = tilUserName.getEditText().getText().toString();
+        String password = tilPassword.getEditText().getText().toString();
+        if (TextUtils.isEmpty(userName)) {
+            tilUserName.setError(getString(R.string.loginUserNameEmptyErrorText));
+            tilPassword.setErrorEnabled(false);
+        } else if (TextUtils.isEmpty(password)) {
+            tilUserName.setErrorEnabled(false);
+            tilPassword.setError(getString(R.string.loginPasswordEmptyErrorText));
+        } else {
+            HashMap<String, String> hashMap = new HashMap<>();
+            hashMap.put("username", userName);
+            hashMap.put("password", password);
+            mPresenterLogin.login(hashMap);
+        }
+
     }
 }

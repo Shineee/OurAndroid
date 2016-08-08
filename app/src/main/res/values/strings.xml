@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">OurAndroid</string>
-    <string name="version">0.1.24.20160808_alpha</string>
     <string name="loginPageText">登录</string>
     <string name="loginUserNameText">用户名</string>
     <string name="loginPasswordText">密码</string>
+    <string name="loginSuccessText">登陆成功</string>
+    <string name="loginUserNameEmptyErrorText">用户名不能为空</string>
+    <string name="loginPasswordEmptyErrorText">密码不能为空</string>
     <string name="registerPageText">注册</string>
     <string name="registerUserNameText">用户名</string>
     <string name="registerPasswordText">密码</string>

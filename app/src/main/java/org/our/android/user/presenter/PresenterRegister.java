@@ -18,10 +18,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
+ * 注册控制模块
  * Created by wangyang on 2016/7/30.
  */
 public class PresenterRegister {
-    private static final String TAG = "";
+    private static final String TAG = "PresenterRegister";
     private LayoutRegisterBinding mLayoutRegisterBinding;
     private Context mContext;
 
@@ -40,7 +41,7 @@ public class PresenterRegister {
                 if (response.isSuccessful()) {
                     L.v(TAG, "onResponse Successful");
                     Snackbar.make(mLayoutRegisterBinding.getRoot(), R.string.registerSuccessText, Snackbar.LENGTH_LONG).show();
-                    Intent intent = new Intent(mLayoutRegisterBinding.getRoot().getContext(), LoginActivity.class);
+                    Intent intent = new Intent(mContext, LoginActivity.class);
                     mContext.startActivity(intent);
                 } else {
                     L.e(TAG, "register onResponse message=%s", response.message());

@@ -8,16 +8,16 @@ android {
         applicationId "org.our.android"
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 25
+        versionName "0.2.0.20160808_alpha"
     }
     //签名
     signingConfigs {
         produceSignConfig {
-            keyAlias 'BM'
-            keyPassword 'beimai2016'
-            storeFile file('beimai.keystore')
-            storePassword 'beimai2016'
+            keyAlias 'OurAndroid'
+            keyPassword '123456'
+            storeFile file('release.jks')
+            storePassword '123456'
         }
     }
     buildTypes {
