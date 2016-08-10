@@ -8,8 +8,8 @@ android {
         applicationId "org.our.android"
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 25
-        versionName "0.2.0.20160808_alpha"
+        versionCode 26
+        versionName "0.2.1.201608010_alpha"
     }
     //签名
     signingConfigs {
