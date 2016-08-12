@@ -1,13 +1,17 @@
 package org.our.android.user.activity;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import org.our.android.R;
+import org.our.android.databinding.LayoutProfileBinding;
 import org.our.android.main.base.BaseActivity;
+import org.our.android.user.model.User;
+import org.our.android.user.presenter.PresenterProfile;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,13 +28,18 @@ public class ProfileActivity extends BaseActivity {
     TextInputLayout tilUserName;
     @BindView(R.id.tilPassword)
     TextInputLayout tilPassword;
+    private PresenterProfile mPresenterProfile;
+    private User mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_profile);
+        LayoutProfileBinding binding = DataBindingUtil.setContentView(this, R.layout.layout_profile);
         ButterKnife.bind(this);
         initView();
+        mPresenterProfile = new PresenterProfile(binding);
+        mUser = new User();
+        binding.setUser(mUser);
     }
 
     private void initView() {

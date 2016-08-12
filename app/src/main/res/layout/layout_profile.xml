@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout xmlns:toolbar="http://schemas.android.com/apk/res-auto"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@color/colorPrimary"
-                  android:fitsSystemWindows="true">
+    <data>
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/tbTopMenu"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary">
+        <variable
+            name="user"
+            type="org.our.android.user.model.User"/>
+    </data>
 
-        </android.support.v7.widget.Toolbar>
-    </LinearLayout>
-
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/dlLeftMenu"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--主布局-->
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tbTopMenu"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary">
+
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/dlLeftMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <!--主布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        </LinearLayout>
-        <!--侧滑菜单-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="#fff"
-            android:orientation="vertical">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/imgAvatar"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dip"
-                android:src="@mipmap/icon"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="1dp"/>
-
-            <ListView
-                android:id="@+id/lvLeftMenu"
+            </LinearLayout>
+            <!--侧滑菜单-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="5dip"
-                android:divider="@null"
-                android:text="DrawerLayout"/>
-        </LinearLayout>
-    </android.support.v4.widget.DrawerLayout>
+                android:layout_gravity="start"
+                android:background="#fff"
+                android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="200dip"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dip"
-        android:elevation="10dp"
-        android:text="@string/loginPageText"
-        android:textColor="@color/colorWhite"
-        android:textSize="18sp"
-        android:theme="@style/RaiseButton"/>
-</LinearLayout>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dip"
+                    android:src="@mipmap/icon"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="1dp"/>
+
+                <ListView
+                    android:id="@+id/lvLeftMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dip"
+                    android:divider="@null"
+                    android:text="DrawerLayout"/>
+            </LinearLayout>
+        </android.support.v4.widget.DrawerLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:elevation="10dp"
+            android:text="@string/loginPageText"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:theme="@style/RaiseButton"/>
+
+    </LinearLayout>
+</layout>
