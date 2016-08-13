@@ -15,4 +15,5 @@ public interface IApiServiceProfile {
      */
     @GET("1/login")
     Call<User> profile(@Query("username") String userName);
+
 }

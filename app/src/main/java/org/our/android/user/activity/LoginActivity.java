@@ -80,6 +80,6 @@ public class LoginActivity extends BaseActivity {
             hashMap.put("password", password);
             mPresenterLogin.login(hashMap);
         }
-
+        mPresenterLogin.product();
     }
 }

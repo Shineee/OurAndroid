@@ -9,7 +9,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 24
         versionCode 27
-        versionName "0.2.2.201608012_alpha"
+        versionName "0.2.3.201608013_alpha"
     }
     //签名
     signingConfigs {
@@ -57,5 +57,7 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     testCompile 'junit:junit:4.12'
     compile 'joda-time:joda-time:2.9.4'
+    //compile 'net.grandcentrix.tray:tray:0.10.0'
     compile 'org.greenrobot:eventbus:3.0.0'
+
 }
